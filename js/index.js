@@ -149,7 +149,7 @@ diagram_data.prototype = {
         var rect_width = (this.options.inner_radius * 2) / Math.sqrt(2);
         
         svg_ctx.append('image')
-        .attr("xlink:href", '../res/head.png')
+        .attr("xlink:href", './res/head.png')
         .attr('x', (svg_ctx.attr('width')/2) - (rect_width/2))
         .attr('y', (svg_ctx.attr('height')/2) - (rect_width/2))
         .attr('width', rect_width)
@@ -186,7 +186,7 @@ window.addEventListener('load', function() {
     .attr('width', 700)
     .attr('height', 700);
     
-    $.getJSON('../test.json', function(data) {
+    $.getJSON('./test.json', function(data) {
         var a = new diagram_data(data, 5, diagram_config);
         a.draw(svg_context);
     });
