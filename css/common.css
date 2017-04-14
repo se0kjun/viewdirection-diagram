@@ -1,0 +1,31 @@
+body {
+    background-color: #f7f7f7;
+}
+
+#viewpoint-diagram-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#viewpoint-diagram {
+    border:3px solid black;
+    background-color:white;
+    width:700px;
+    height:700px;
+}
+
+.title h1 {
+    text-align: center;
+}
+
+#head_top_view {
+    background-image: url('../res/head.png');
+    background-size: cover;
+}
+/*
+#head_image {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 375px;
+}*/
