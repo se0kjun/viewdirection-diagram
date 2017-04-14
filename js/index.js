@@ -168,19 +168,6 @@ diagram_data.prototype = {
             .attr('height', '1px')
             .attr('fill', clr);
         }
-//        var legend_wrapper = svg_ctx.append('rect')
-//        .attr('x', (svg_ctx.attr('width') * 0.9))
-//        .attr('y', (svg_ctx.attr('height') * 0.05))
-//        .attr('width', '40px')
-//        .attr('height', '100px')
-//        .attr('fill', 'red');
-//        
-//        legend_wrapper.sppend('rect')
-//        .attr('x', 0)
-//        .attr('y', 0)
-//        .attr('width', '40px')
-//        .attr('height', '20px')
-//        .attr('fill', 'black');
     }
 }
 
