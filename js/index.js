@@ -102,7 +102,10 @@ function diagram_data(data, precision, options) {
 diagram_data.prototype = {
     init: function() {
         this.data.forEach(function(elem) {
-            this.lookup_data[Math.floor(elem.direction / this.precision)]++;
+            if (elem.direction > 0)
+                this.lookup_data[Math.floor((elem.direction - (Math.floor(elem.direction / 360) * 360)) / this.precision)]++;
+            else
+                this.lookup_data[Math.floor((elem.direction - (Math.floor(elem.direction / 360) * 360)) / this.precision)]++;
         }, this);
     },
     // hue value: low and high
@@ -186,8 +189,11 @@ window.addEventListener('load', function() {
     .attr('width', 700)
     .attr('height', 700);
     
-    $.getJSON('./test.json', function(data) {
+    $.getJSON('./data/video2/physical_2017_01_22_19_13_03__0video2.json', function(data) {
+        console.log("test");
         var a = new diagram_data(data, 5, diagram_config);
+        console.log("test2");
         a.draw(svg_context);
+        console.log("test3");
     });
 });
